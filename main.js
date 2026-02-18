@@ -48,9 +48,12 @@ const team = [
 
 ]
 
+// select the dom nodes
+const rowEl = document.querySelector('section.team .row')
+
 //loop over the array for each item render the card markup
 
-const cards = ''
+let cards = ''
 for (let i = 0; i < team.length; i++) {
     const teamMember = team[i];
     console.log(teamMember);
@@ -69,5 +72,10 @@ for (let i = 0; i < team.length; i++) {
                 </div>
             </div>`
     console.log(markup);
+
+    cards += markup
     
 }
+
+console.log(cards);
+rowEl.innerHTML = cards
