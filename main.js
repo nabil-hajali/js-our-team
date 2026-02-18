@@ -47,3 +47,27 @@ const team = [
     
 
 ]
+
+//loop over the array for each item render the card markup
+
+const cards = ''
+for (let i = 0; i < team.length; i++) {
+    const teamMember = team[i];
+    console.log(teamMember);
+
+    //generate the member card
+    const {name, role, mail, image} = teamMember
+    const markup = `
+    <div class="container">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3">
+                    <img src="./assets 2/img/${image}" alt="" srcset="">
+                    <div class="card-body">
+                        <h2 class="card-title">${name}</h2>
+                        <div class="role">${role}</div>
+                        <div class="mail">${mail}</div>
+                    </div>
+                </div>
+            </div>`
+    console.log(markup);
+    
+}
